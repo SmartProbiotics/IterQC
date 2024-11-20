@@ -1,4 +1,4 @@
-# Codes and Datasets of $kPEX$ for Maximum  k-Plex Searching.
+# Codes and Datasets of $IterQC$ for Maximum Quasi Clique Searching.
 
 Quick start:
 ```shell
@@ -20,19 +20,19 @@ binary graph:
 - then $4\times n$ Bytes: the degree $d_G(\cdot)$ of $n$ vertices
 - then: $n$ parts ($2m\times 4$ Bytes in total), each part has $d_G(u)$ integers which are the neighbors of $u$ ***in ascending order***
 
-We provide some examples of binary graph file  in [*data/bin/*](./data/bin/).
+We provide some examples of binary graph file  in [**data/bin/**](./data/bin/).
 
 More details about reading graphs from files can be found in ***Graph::readFromFile*** in [**IterQC/Graph.h**](./IterQC/Graph.h).
 
 
 ### Transform other formats to `*.bin`
-We provide [*trans.cpp*](./data/change_graph_format) to convert 4 kinds of formats to binary files.\
+We provide [**some C++ code**](./data/change_graph_format) to convert four different formats into binary files.\
 More details about it can be found in [**data/change_graph_format/readme.txt**](./data/change_graph_format/readme.txt)
 
 <hr>
 
 ## B. Algorithm $IterQC$
-The whole procedure for searching Maximum K-Plex is located at [*IterQC/*](./IterQC/). 
+The whole procedure for searching Maximum Quasi Clique is located at [*IterQC/*](./IterQC/). 
 
 ### 1. Compile
 ```shell
