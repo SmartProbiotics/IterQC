@@ -59,6 +59,6 @@ make
 ./IterQC ../data/bin/brock200-2.bin 0.95
 ```
 
-### 5. About major components in codes
+### 4. About major components in codes
 - ***KPEX and Fake LB*** corresponds to (./IterQC/kplex.h);
 - ***PreProccessing*** corresponds to (./IterQC/SuperUB.h)
