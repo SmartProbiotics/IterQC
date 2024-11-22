@@ -129,7 +129,8 @@ int main(int argc, char *argv[]) {
 	double alpha = 1-gama;
     graph=new Graph();
     graph->readFromFile(file_path);
-    check_graph(graph);
+    //If you are not sure whether the graph input is valid, please let the following row check it.
+    //check_graph(graph);
     long long s1 = clock();
 
     cout<<filename<<" n:"<<graph->n<<" m:"<<graph->m<<endl;
