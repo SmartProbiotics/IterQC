@@ -3,7 +3,6 @@
 using namespace std;
 #define LEN_LIMIT (1<<10)
 char filename[LEN_LIMIT];
-int searchTime=0;
 
 void check_graph(Graph* g){
     cout<<"Check Graph: "<<"N Anno:"<<g->n<<"  M Anno:"<<g->m<<endl;
@@ -123,6 +122,10 @@ int main(int argc, char *argv[]) {
 	gama=atof(argv[2]);
     
 	cout<<"gama: "<<gama<<endl;
+    if(gama<0.5){
+        cout<<"error! gamma must >=0.5"<<endl;
+        exit(1);
+    }
 	double alpha = 1-gama;
     graph=new Graph();
     graph->readFromFile(file_path);
@@ -175,7 +178,6 @@ int main(int argc, char *argv[]) {
     // for(auto v:solution) res.push_back(v);
     delete graph;
 	cout<<"Running Time: "<<(double)(clock()-s1)/CLOCKS_PER_SEC<<"s"<<endl;
-	cout<<"Search Time: "<<(double)searchTime/CLOCKS_PER_SEC<<"s"<<endl;
 	cout<<"res: "<<n<<endl;
     // for(auto v:solution) cout<<v<<" ";
     // cout<<endl;
