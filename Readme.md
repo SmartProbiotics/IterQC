@@ -4,7 +4,7 @@ Quick start:
 ```shell
 cd IterQC
 make
-./IterQC graph_path k
+./IterQC graph_path gamma
 ```
 
 
