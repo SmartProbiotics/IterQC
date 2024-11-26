@@ -192,13 +192,6 @@ void heuris()
         StrongHeuris(); // generate n subgraphs and compute larger lb
 }
 
-/**
- * @brief branch and bound searching
- */
-void bnb()
-{
-}
-
 int loop_cnt = 0;
 long long heuris_average = 0, bnb_average = 0;
 
