@@ -24,7 +24,7 @@ void check_graph(Graph *g)
         for (int j = g->pstart[i]; j < g->pstart[i + 1]; j++)
         {
             int v = edges[j];
-            // cout<<"("<<i<<","<<v<<"),"<<endl;
+            cout<<"("<<i<<","<<v<<"),"<<endl;
             if (v < 0 || v >= n)
             {
                 delete[] st;
@@ -149,7 +149,7 @@ int main(int argc, char *argv[])
     graph = new Graph();
     graph->readFromFile(file_path);
     // If you are not sure whether the graph input is valid, please let the following row check it.
-    // check_graph(graph);
+    //check_graph(graph);
     long long s1 = clock();
 
     cout << filename << " n:" << graph->n << " m:" << graph->m << endl;

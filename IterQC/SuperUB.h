@@ -7,7 +7,6 @@ class SuperUB_Extractor
 {
 public:
     ui *peel_sequence;
-    bool gama_type = false;
     double gama = 0;
     ui *pstart, *edges;
     int n, m;
@@ -55,7 +54,6 @@ public:
 
     void init(string file_path, double gama_)
     {
-        gama_type = true;
         gama = gama_;
         if (pstart == nullptr)
         {
@@ -71,6 +69,22 @@ public:
             delete g;
         }
     }
+
+    void init(ui n_,ui m_,ui* pstart_,ui* edges_){
+        if(pstart!=nullptr){
+            delete[] peel_sequence;
+            delete[] pstart;
+            delete[] edges;
+        }
+        n = n_;
+        m = m_;
+        peel_sequence = new ui[n];
+        pstart = new ui[n + 1];
+        edges = new ui[m];
+        memcpy(pstart, pstart_, (n + 1) * sizeof(int));
+        memcpy(edges, edges_, m * sizeof(int));
+    }
+
     ~SuperUB_Extractor()
     {
         delete[] peel_sequence;
