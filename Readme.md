@@ -60,5 +60,5 @@ make
 ```
 
 ### 4. About major components in codes
-- ***KPEX and Fake LB*** corresponds to (./IterQC/kplex.h);
+- ***KPEX and Pseudo LB*** corresponds to (./IterQC/kplex.h);
 - ***PreProccessing*** corresponds to (./IterQC/SuperUB.h)
