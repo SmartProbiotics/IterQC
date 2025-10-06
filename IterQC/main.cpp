@@ -170,7 +170,7 @@ int main(int argc, char *argv[])
     mini_g.init(graph->n, graph->m, graph->pstart, graph->edge_to);
     int pre_graph_n = graph->n, pre_graph_m = graph->m;
     if (lb > 0)
-        shrink_graph(mini_g, my_floor((lb - 1) * gama) + 1);
+        shrink_graph(mini_g, my_floor((lb - 1) * gama));
     cout << "Prunning graph:" << endl
          << "new n:" << mini_g.n << " " << "new m:" << mini_g.m << endl;
     printf("Prunning N:%.2f%  M:%.2f%\n", 100 * (double)(pre_graph_n - mini_g.n) / pre_graph_n, 100 * (double)(pre_graph_m - mini_g.m) / pre_graph_m);
